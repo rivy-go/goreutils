@@ -10,10 +10,10 @@ import (
 func main() {
 	u, _ := user.Lookup(os.Args[1])
 	groups, _ := u.GroupIds()
-	var group_names []string
+	var groupNames []string
 	for _, element := range groups {
 		group, _ := user.LookupGroupId(element)
-		group_names = append(group_names, group.Name)
+		groupNames = append(groupNames, group.Name)
 	}
-	fmt.Println(strings.Join(group_names, " "))
+	fmt.Println(strings.Join(groupNames, " "))
 }
