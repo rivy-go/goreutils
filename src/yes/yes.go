@@ -7,6 +7,6 @@ import (
 
 func main() {
 	for true {
-		fmt.Println(os.Args[1])
+		fmt.Print(os.Args[1])
 	}
 }

@@ -7,5 +7,5 @@ import (
 
 func main() {
 	workdir, _ := os.Getwd()
-	fmt.Println(workdir)
+	fmt.Print(workdir)
 }

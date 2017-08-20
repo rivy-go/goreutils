@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	current_user, _ := user.Current()
-	fmt.Println(current_user.Username)
+	currentUser, _ := user.Current()
+	fmt.Print(currentUser.Username)
 }

@@ -14,5 +14,5 @@ func main() {
 	for _, file := range files {
 		fileNames = append(fileNames, file.Name())
 	}
-	fmt.Println(strings.Join(fileNames, " "))
+	fmt.Print(strings.Join(fileNames, " "))
 }

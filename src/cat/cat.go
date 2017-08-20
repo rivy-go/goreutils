@@ -8,5 +8,5 @@ import (
 
 func main() {
 	file, _ := ioutil.ReadFile(os.Args[1])
-	fmt.Println(string(file))
+	fmt.Print(string(file))
 }

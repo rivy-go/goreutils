@@ -15,5 +15,5 @@ func main() {
 		group, _ := user.LookupGroupId(element)
 		groupNames = append(groupNames, group.Name)
 	}
-	fmt.Println(strings.Join(groupNames, " "))
+	fmt.Print(strings.Join(groupNames, " "))
 }
