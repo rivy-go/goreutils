@@ -21,3 +21,4 @@ all:
 	go build -o build/true src/true/true.go
 	go build -o build/whoami src/whoami/whoami.go
 	go build -o build/yes src/yes/yes.go
+	go build -o build/kill src/kill/kill.go
