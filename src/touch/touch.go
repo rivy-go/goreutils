@@ -1,11 +1,12 @@
 package main
 
 import (
-  "os"
-  "time"
+	"os"
+	"time"
 )
 
 func main() {
-  current_time := time.Now()
-  os.Chtimes(os.Args[1], current_time, current_time)
+	os.OpenFile(os.Args[1], os.O_CREATE, 0666)
+	currentTime := time.Now()
+	os.Chtimes(os.Args[1], currentTime, currentTime)
 }
