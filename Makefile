@@ -27,3 +27,6 @@ test:
 	go test src/echo/echo_test.go
 	go test src/pwd/pwd_test.go
 	go test src/whoami/whoami_test.go
+	go test src/cat/cat_test.go
+	go test src/false/false_test.go
+	go test src/true/true_test.go

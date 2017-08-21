@@ -9,5 +9,7 @@ import (
 
 func main() {
 	file, _ := ioutil.ReadFile(os.Args[1])
-	fmt.Printf("%x", md5.Sum(file))
+	hash := md5.Sum(file)
+	hashString := fmt.Sprintf("%x", hash)
+	fmt.Print(hashString)
 }
