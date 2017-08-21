@@ -9,5 +9,5 @@ func main() {
 	var mode int
 	flag.IntVar(&mode, "mode", 775, "The file mode")
 	flag.Parse()
-	os.Mkdir(os.Args[1], os.FileMode(mode))
+	os.Mkdir(flag.Arg(0), os.FileMode(mode))
 }
