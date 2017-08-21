@@ -2,9 +2,9 @@ package main
 
 import (
 	"crypto/md5"
+	"flag"
 	"fmt"
 	"io/ioutil"
-	"os"
 )
 
 func main() {
