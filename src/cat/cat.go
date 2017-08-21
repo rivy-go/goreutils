@@ -1,12 +1,13 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"io/ioutil"
-	"os"
 )
 
 func main() {
-	file, _ := ioutil.ReadFile(os.Args[1])
+	flag.Parse()
+	file, _ := ioutil.ReadFile(flag.Arg(0))
 	fmt.Print(string(file))
 }

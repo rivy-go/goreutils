@@ -1,14 +1,15 @@
 package main
 
 import (
+	"flag"
 	"fmt"
-	"os"
 	"os/user"
 	"strings"
 )
 
 func main() {
-	u, _ := user.Lookup(os.Args[1])
+	flag.Parse()
+	u, _ := user.Lookup(flag.Arg(0))
 	groups, _ := u.GroupIds()
 	var groupNames []string
 	for _, element := range groups {

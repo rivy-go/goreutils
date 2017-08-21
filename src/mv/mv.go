@@ -1,9 +1,11 @@
 package main
 
 import (
+	"flag"
 	"os"
 )
 
 func main() {
-	os.Rename(os.Args[1], os.Args[2])
+	flag.Parse()
+	os.Rename(flag.Arg(0), flag.Arg(1))
 }

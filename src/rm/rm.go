@@ -1,7 +1,11 @@
 package main
 
-import "os"
+import (
+	"flag"
+	"os"
+)
 
 func main() {
-	os.RemoveAll(os.Args[1])
+	flag.Parse()
+	os.RemoveAll(flag.Arg(0))
 }

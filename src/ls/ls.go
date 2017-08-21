@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"io/ioutil"
 	"os"
@@ -8,6 +9,7 @@ import (
 )
 
 func main() {
+	flag.Parse()
 	var fileNames []string
 	currentDir, _ := os.Getwd()
 	files, _ := ioutil.ReadDir(currentDir)

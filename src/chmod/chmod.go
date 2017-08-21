@@ -1,13 +1,15 @@
 package main
 
 import (
+	"flag"
 	"os"
 	"strconv"
 )
 
 func main() {
-	intMode, _ := strconv.Atoi(os.Args[1])
+	flag.Parse()
+	intMode, _ := strconv.Atoi(flag.Arg(0))
 	mode := os.FileMode(intMode)
-	os.Chmod(os.Args[2], mode)
+	os.Chmod(flag.Arg(1), mode)
 
 }

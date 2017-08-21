@@ -1,10 +1,11 @@
 package main
 
 import (
+	"flag"
 	"fmt"
-	"os"
 )
 
 func main() {
-	fmt.Print(os.Args[1])
+	flag.Parse()
+	fmt.Print(flag.Parse(0))
 }

@@ -1,12 +1,14 @@
 package main
 
 import (
+	"flag"
 	"os"
 	"strconv"
 )
 
 func main() {
-	pid, _ := strconv.Atoi(os.Args[1])
+	flag.Parse()
+	pid, _ := strconv.Atoi(flag.Arg(0))
 	proccess, _ := os.FindProcess(pid)
 	proccess.Kill()
 }

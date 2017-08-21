@@ -1,8 +1,12 @@
 package main
 
-import "os"
+import (
+	"flag"
+	"os"
+)
 
 func main() {
+	flag.Parse()
 	process, _ := os.FindProcess(os.Getppid())
 	process.Kill()
 }

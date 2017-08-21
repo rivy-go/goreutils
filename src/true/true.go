@@ -1,7 +1,11 @@
 package main
 
-import "os"
+import (
+	"flag"
+	"os"
+)
 
 func main() {
-  os.Exit(0)
+	flag.Parse()
+	os.Exit(0)
 }
