@@ -1,7 +1,13 @@
 package main
 
-import "os"
+import (
+	"flag"
+	"os"
+)
 
 func main() {
-	os.Mkdir(os.Args[1], 0755)
+	var mode int
+	flag.IntVar(&mode, "mode", 775, "The file mode")
+	flag.Parse()
+	os.Mkdir(os.Args[1], os.FileMode(mode))
 }
