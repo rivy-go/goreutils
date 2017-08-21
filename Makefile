@@ -23,6 +23,7 @@ all:
 	go build -o build/yes src/yes/yes.go
 	go build -o build/kill src/kill/kill.go
 test:
+	go test src/ls/ls_test.go
 	go test src/arch/arch_test.go
 	go test src/echo/echo_test.go
 	go test src/pwd/pwd_test.go
