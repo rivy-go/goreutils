@@ -1,4 +1,4 @@
-all:
+compile:
 	go build -o build/arch src/arch/arch.go
 	go build -o build/cat src/cat/cat.go
 	go build -o build/chmod src/chmod/chmod.go
