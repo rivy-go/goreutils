@@ -9,5 +9,7 @@ import (
 
 func main() {
 	file, _ := ioutil.ReadFile(os.Args[1])
-	fmt.Printf("%x", sha256.Sum256(file))
+	hash := sha256.Sum256(file)
+	hashString := fmt.Sprintf("%x", hash)
+	fmt.Print(hashString)
 }

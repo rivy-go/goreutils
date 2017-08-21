@@ -30,3 +30,7 @@ test:
 	go test src/cat/cat_test.go
 	go test src/false/false_test.go
 	go test src/true/true_test.go
+	go test src/md5sum/md5sum_test.go
+	go test src/sha1sum/sha1sum_test.go
+	go test src/sha256sum/sha256sum_test.go
+	go test src/sha512sum/sha512sum_test.go
