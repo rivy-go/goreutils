@@ -1,8 +1,6 @@
 COMPILE=cd build && go build ../src/
 TEST=go test src/
 compile:
-	rm -rf build
-	mkdir build
 	$(COMPILE)arch/arch.go
 	$(COMPILE)cat/cat.go
 	$(COMPILE)chmod/chmod.go
