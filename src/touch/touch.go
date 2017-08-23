@@ -14,7 +14,7 @@ func main() {
 	flag.IntVar(&mode, "mode", 666, "The filemode if it will be created")
 	flag.Parse()
 	if !noCreate {
-		err := os.OpenFile(flag.Arg(0), os.O_CREATE, os.FileMode(mode))
+		_, err := os.OpenFile(flag.Arg(0), os.O_CREATE, os.FileMode(mode))
 		if err != nil {
 			fmt.Print("Error")
 			os.Exit(1)
