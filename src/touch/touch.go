@@ -2,6 +2,7 @@ package main
 
 import (
 	"flag"
+	"fmt"
 	"os"
 	"time"
 )
@@ -13,8 +14,16 @@ func main() {
 	flag.IntVar(&mode, "mode", 666, "The filemode if it will be created")
 	flag.Parse()
 	if !noCreate {
-		os.OpenFile(flag.Arg(0), os.O_CREATE, os.FileMode(mode))
+		err := os.OpenFile(flag.Arg(0), os.O_CREATE, os.FileMode(mode))
+		if err != nil {
+			fmt.Print("Error")
+			os.Exit(1)
+		}
 	}
 	currentTime := time.Now()
-	os.Chtimes(flag.Arg(0), currentTime, currentTime)
+	err := os.Chtimes(flag.Arg(0), currentTime, currentTime)
+	if err != nil {
+		fmt.Print("Error")
+		os.Exit(1)
+	}
 }

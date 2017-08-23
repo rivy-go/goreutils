@@ -8,6 +8,10 @@ import (
 
 func main() {
 	flag.Parse()
-	workdir, _ := os.Getwd()
+	workdir, err := os.Getwd()
 	fmt.Print(workdir)
+	if err != nil {
+		fmt.Print("Error")
+		os.Exit(1)
+	}
 }
