@@ -7,7 +7,6 @@ compile:
 	$(COMPILE)chmod/chmod.go
 	$(COMPILE)date/date.go
 	$(COMPILE)echo/echo.go
-	$(COMPILE)exit/exit.go
 	$(COMPILE)false/false.go
 	$(COMPILE)groups/groups.go
 	$(COMPILE)ls/ls.go
