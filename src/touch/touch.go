@@ -16,14 +16,14 @@ func main() {
 	if !noCreate {
 		_, err := os.OpenFile(flag.Arg(0), os.O_CREATE, os.FileMode(mode))
 		if err != nil {
-			fmt.Print("Error")
+			fmt.Print(err)
 			os.Exit(1)
 		}
 	}
 	currentTime := time.Now()
 	err := os.Chtimes(flag.Arg(0), currentTime, currentTime)
 	if err != nil {
-		fmt.Print("Error")
+		fmt.Print(err)
 		os.Exit(1)
 	}
 }

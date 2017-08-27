@@ -3,6 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
+	"os"
 	"os/user"
 	"strings"
 )
@@ -13,7 +14,11 @@ func main() {
 	groups, _ := u.GroupIds()
 	var groupNames []string
 	for _, element := range groups {
-		group, _ := user.LookupGroupId(element)
+		group, err := user.LookupGroupId(element)
+		if err != nil {
+			fmt.Print(err)
+			os.Exit(1)
+		}
 		groupNames = append(groupNames, group.Name)
 	}
 	fmt.Print(strings.Join(groupNames, " "))

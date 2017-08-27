@@ -16,9 +16,9 @@ func main() {
 	for _, file := range files {
 		fileNames = append(fileNames, file.Name())
 	}
-	fmt.Print(strings.Join(fileNames, " "))
 	if err != nil {
-		fmt.Print("Error")
+		fmt.Print(err)
 		os.Exit(1)
 	}
+	fmt.Print(strings.Join(fileNames, " "))
 }

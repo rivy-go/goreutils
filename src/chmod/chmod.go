@@ -9,11 +9,15 @@ import (
 
 func main() {
 	flag.Parse()
-	intMode, _ := strconv.Atoi(flag.Arg(0))
+	intMode, err := strconv.Atoi(flag.Arg(0))
+	if err != nil {
+		fmt.Print(err)
+		os.Exit(1)
+	}
 	mode := os.FileMode(intMode)
 	err := os.Chmod(flag.Arg(1), mode)
 	if err != nil {
-		fmt.Print("Error")
+		fmt.Print(err)
 		os.Exit(1)
 	}
 }

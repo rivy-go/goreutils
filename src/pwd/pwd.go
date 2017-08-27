@@ -9,9 +9,9 @@ import (
 func main() {
 	flag.Parse()
 	workdir, err := os.Getwd()
-	fmt.Print(workdir)
 	if err != nil {
-		fmt.Print("Error")
+		fmt.Print(err)
 		os.Exit(1)
 	}
+	fmt.Print(workdir)
 }

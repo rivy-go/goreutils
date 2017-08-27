@@ -10,9 +10,9 @@ import (
 func main() {
 	flag.Parse()
 	currentUser, err := user.Current()
-	fmt.Print(currentUser.Username)
 	if err != nil {
-		fmt.Print("Error")
+		fmt.Print(err)
 		os.Exit(1)
 	}
+	fmt.Print(currentUser.Username)
 }
