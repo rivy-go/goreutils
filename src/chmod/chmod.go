@@ -15,7 +15,7 @@ func main() {
 		os.Exit(1)
 	}
 	mode := os.FileMode(intMode)
-	err := os.Chmod(flag.Arg(1), mode)
+	err = os.Chmod(flag.Arg(1), mode)
 	if err != nil {
 		fmt.Print(err)
 		os.Exit(1)
