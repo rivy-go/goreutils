@@ -17,8 +17,7 @@ func main() {
 		fileNames = append(fileNames, file.Name())
 	}
 	if err != nil {
-		fmt.Print(err)
-		os.Exit(1)
+		log.Fatal(err)
 	}
 	fmt.Print(strings.Join(fileNames, " "))
 }

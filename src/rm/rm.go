@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	"fmt"
+	"log"
 	"os"
 )
 
@@ -10,7 +10,6 @@ func main() {
 	flag.Parse()
 	err := os.RemoveAll(flag.Arg(0))
 	if err != nil {
-		fmt.Print("Error")
-		os.Exit(1)
+		log.Fatal(err)
 	}
 }

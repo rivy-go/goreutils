@@ -5,7 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"io/ioutil"
-	"os"
+	"log"
 )
 
 func main() {
@@ -15,7 +15,6 @@ func main() {
 	hashString := fmt.Sprintf("%x", hash)
 	fmt.Print(hashString)
 	if err != nil {
-		fmt.Print("Error")
-		os.Exit(1)
+		log.Fatal(err)
 	}
 }

@@ -4,7 +4,7 @@ import (
 	"flag"
 	"fmt"
 	"io/ioutil"
-	"os"
+	"log"
 )
 
 func main() {
@@ -12,7 +12,6 @@ func main() {
 	file, err := ioutil.ReadFile(flag.Arg(0))
 	fmt.Print(string(file))
 	if err != nil {
-		fmt.Print("Error")
-		os.Exit(1)
+		log.Fatal(err)
 	}
 }

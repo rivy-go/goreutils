@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	"fmt"
+	"log"
 	"os"
 	"time"
 )
@@ -16,14 +16,12 @@ func main() {
 	if !noCreate {
 		_, err := os.OpenFile(flag.Arg(0), os.O_CREATE, os.FileMode(mode))
 		if err != nil {
-			fmt.Print(err)
-			os.Exit(1)
+			log.Fatal(err)
 		}
 	}
 	currentTime := time.Now()
 	err := os.Chtimes(flag.Arg(0), currentTime, currentTime)
 	if err != nil {
-		fmt.Print(err)
-		os.Exit(1)
+		log.Fatal(err)
 	}
 }

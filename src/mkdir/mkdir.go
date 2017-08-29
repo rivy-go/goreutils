@@ -2,7 +2,7 @@ package main
 
 import (
 	"flag"
-	"fmt"
+	"log"
 	"os"
 )
 
@@ -12,7 +12,6 @@ func main() {
 	flag.Parse()
 	err := os.Mkdir(flag.Arg(0), os.FileMode(mode))
 	if err != nil {
-		fmt.Print(err)
-		os.Exit(1)
+		log.Fatal(err)
 	}
 }

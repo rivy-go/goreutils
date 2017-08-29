@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"os"
+	"log"
 	"os/user"
 	"strings"
 )
@@ -16,8 +16,7 @@ func main() {
 	for _, element := range groups {
 		group, err := user.LookupGroupId(element)
 		if err != nil {
-			fmt.Print(err)
-			os.Exit(1)
+			log.Fatal(err)
 		}
 		groupNames = append(groupNames, group.Name)
 	}

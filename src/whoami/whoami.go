@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"fmt"
-	"os"
+	"log"
 	"os/user"
 )
 
@@ -11,8 +11,7 @@ func main() {
 	flag.Parse()
 	currentUser, err := user.Current()
 	if err != nil {
-		fmt.Print(err)
-		os.Exit(1)
+		log.Fatal(err)
 	}
 	fmt.Print(currentUser.Username)
 }
