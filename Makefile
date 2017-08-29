@@ -39,3 +39,4 @@ test:
 	$(TEST)sha1sum/sha1sum_test.go
 	$(TEST)sha256sum/sha256sum_test.go
 	$(TEST)sha512sum/sha512sum_test.go
+  $(TEST)env/env_test.go
