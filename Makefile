@@ -26,7 +26,7 @@ compile:
 	$(COMPILE)kill/kill.go
 	$(COMPILE)truncate/truncate.go
 	$(COMPILE)cp/cp.go
-  $(COMPILE)ln/ln.go
+	$(COMPILE)ln/ln.go
 test:
 	$(TEST)sleep/sleep_test.go
 	$(TEST)groups/groups_test.go
