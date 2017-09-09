@@ -6,4 +6,4 @@ jobs:
       - image: golang:1.8.3
     steps:
       - checkout
-      - run: make test
+      - run: go test ./...

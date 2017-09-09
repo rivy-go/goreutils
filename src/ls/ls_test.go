@@ -2,11 +2,11 @@ package main
 
 import (
 	"bytes"
+	"io/ioutil"
+	"os"
 	"os/exec"
+	"strings"
 	"testing"
-  "os"
-  "io/ioutil"
-  "strings"
 )
 
 func TestOutput(t *testing.T) {
@@ -14,13 +14,13 @@ func TestOutput(t *testing.T) {
 	var out bytes.Buffer
 	cmd.Stdout = &out
 	cmd.Run()
-  var fileNames []string
+	var fileNames []string
 	currentDir, _ := os.Getwd()
 	files, _ := ioutil.ReadDir(currentDir)
 	for _, file := range files {
 		fileNames = append(fileNames, file.Name())
 	}
-	output := strings.Join(fileNames, " ")
+	output := strings.Join(fileNames, "\n")
 	if out.String() != output {
 		t.Fail()
 	}
