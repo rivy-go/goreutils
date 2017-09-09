@@ -24,6 +24,10 @@ func TestCreated(t *testing.T) {
 	if string(newFile) != "test" {
 		t.Fail()
 	}
+	_, err = os.Stat("old")
+	if err != nil {
+		t.Fail()
+	}
 	os.Remove("old")
 	os.Remove("new")
 }
