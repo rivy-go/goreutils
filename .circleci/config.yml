@@ -3,7 +3,7 @@ jobs:
   build:
     working_directory: ~/goreutils
     docker:
-      - image: golang:1.8.3
+      - image: golang:1.9.0
     steps:
       - checkout
       - run: make test
