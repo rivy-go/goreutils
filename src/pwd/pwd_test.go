@@ -13,7 +13,7 @@ func TestOutput(t *testing.T) {
 	cmd.Stdout = &out
 	cmd.Run()
 	workdir, _ := os.Getwd()
-	if out.String() != workdir {
+	if out.String() != workdir+"\n" {
 		t.Fail()
 	}
 }

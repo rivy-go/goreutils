@@ -17,7 +17,7 @@ func TestOutput(t *testing.T) {
 	file, _ := ioutil.ReadFile("../../Readme.md")
 	hash := sha512.Sum512(file)
 	hashString := fmt.Sprintf("%x", hash)
-	if out.String() != hashString {
+	if out.String() != hashString+"\n" {
 		t.Fail()
 	}
 }

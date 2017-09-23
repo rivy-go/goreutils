@@ -21,7 +21,7 @@ func TestOutput(t *testing.T) {
 		fileNames = append(fileNames, file.Name())
 	}
 	output := strings.Join(fileNames, "\n")
-	if out.String() != output {
+	if out.String() != output+"\n" {
 		t.Fail()
 	}
 }

@@ -20,5 +20,5 @@ func main() {
 		}
 		groupNames = append(groupNames, group.Name)
 	}
-	fmt.Print(strings.Join(groupNames, "\n"))
+	fmt.Println(strings.Join(groupNames, "\n"))
 }

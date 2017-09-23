@@ -3,18 +3,18 @@ package main
 import (
 	"bytes"
 	"os/exec"
+	"os/user"
+	"strings"
 	"testing"
-  "os/user"
-  "strings"
 )
 
 func TestOutput(t *testing.T) {
-  testUser, _ := user.Current()
+	testUser, _ := user.Current()
 	cmd := exec.Command("go", "run", "groups.go", testUser.Username)
 	var out bytes.Buffer
 	cmd.Stdout = &out
 	cmd.Run()
-  u, _ := user.Lookup(testUser.Username)
+	u, _ := user.Lookup(testUser.Username)
 	groups, _ := u.GroupIds()
 	var groupNames []string
 	for _, element := range groups {
@@ -22,7 +22,7 @@ func TestOutput(t *testing.T) {
 		groupNames = append(groupNames, group.Name)
 	}
 	output := strings.Join(groupNames, " ")
-	if out.String() != output {
+	if out.String() != output+"\n" {
 		t.Fail()
 	}
 }

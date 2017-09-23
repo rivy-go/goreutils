@@ -13,7 +13,7 @@ func TestOutput(t *testing.T) {
 	cmd.Stdout = &out
 	cmd.Run()
 	file, _ := ioutil.ReadFile("../../Readme.md")
-	if out.String() != string(file) {
+	if out.String() != string(file)+"\n" {
 		t.Fail()
 	}
 }

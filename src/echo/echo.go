@@ -7,5 +7,5 @@ import (
 
 func main() {
 	flag.Parse()
-	fmt.Print(flag.Arg(0))
+	fmt.Println(flag.Arg(0))
 }

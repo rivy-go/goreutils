@@ -8,5 +8,5 @@ import (
 
 func main() {
 	flag.Parse()
-	fmt.Print(runtime.GOARCH)
+	fmt.Println(runtime.GOARCH)
 }

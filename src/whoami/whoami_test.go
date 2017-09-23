@@ -13,7 +13,7 @@ func TestOutput(t *testing.T) {
 	cmd.Stdout = &out
 	cmd.Run()
 	currentUser, _ := user.Current()
-	if out.String() != currentUser.Username {
+	if out.String() != currentUser.Username+"\n" {
 		t.Fail()
 	}
 }

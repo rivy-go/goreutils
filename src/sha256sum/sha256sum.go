@@ -13,7 +13,7 @@ func main() {
 	file, err := ioutil.ReadFile(flag.Arg(0))
 	hash := sha256.Sum256(file)
 	hashString := fmt.Sprintf("%x", hash)
-	fmt.Print(hashString)
+	fmt.Println(hashString)
 	if err != nil {
 		log.Fatal(err)
 	}

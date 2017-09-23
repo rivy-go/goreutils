@@ -11,7 +11,7 @@ func TestOutput(t *testing.T) {
 	var out bytes.Buffer
 	cmd.Stdout = &out
 	cmd.Run()
-	if out.String() != "testing" {
+	if out.String() != "testing"+"\n" {
 		t.Fail()
 	}
 }

@@ -8,5 +8,5 @@ import (
 
 func main() {
 	flag.Parse()
-	fmt.Print(time.Now())
+	fmt.Println(time.Now())
 }

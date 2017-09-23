@@ -12,7 +12,7 @@ func TestOutput(t *testing.T) {
 	var out bytes.Buffer
 	cmd.Stdout = &out
 	cmd.Run()
-	if out.String() != runtime.GOARCH {
+	if out.String() != runtime.GOARCH+"\n" {
 		t.Fail()
 	}
 }

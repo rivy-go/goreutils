@@ -20,5 +20,5 @@ func main() {
 	if err != nil {
 		log.Fatal(err)
 	}
-	fmt.Print(strings.Join(fileNames, "\n"))
+	fmt.Println(strings.Join(fileNames, "\n"))
 }
