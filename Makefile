@@ -26,3 +26,4 @@ compile:
 	$(COMPILE)truncate/truncate.go
 	$(COMPILE)cp/cp.go
 	$(COMPILE)ln/ln.go
+.SILENT:
