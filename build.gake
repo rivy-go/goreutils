@@ -1,6 +1,7 @@
 .VAR:COMPILE:go build ../src/
 mkdir -p build
 .CD:build
+.CONC
 COMPILEarch/arch.go
 COMPILEcat/cat.go
 COMPILEchmod/chmod.go
@@ -26,3 +27,4 @@ COMPILEkill/kill.go
 COMPILEtruncate/truncate.go
 COMPILEcp/cp.go
 COMPILEln/ln.go
+.ENDCONC
