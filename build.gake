@@ -1,0 +1,28 @@
+.VAR:COMPILE:go build ../src/
+mkdir -p build
+.CD:build
+COMPILEarch/arch.go
+COMPILEcat/cat.go
+COMPILEchmod/chmod.go
+COMPILEdate/date.go
+COMPILEecho/echo.go
+COMPILEfalse/false.go
+COMPILEgroups/groups.go
+COMPILEls/ls.go
+COMPILEmd5sum/md5sum.go
+COMPILEmkdir/mkdir.go
+COMPILEmv/mv.go
+COMPILEpwd/pwd.go
+COMPILErm/rm.go
+COMPILEsha1sum/sha1sum.go
+COMPILEsha256sum/sha256sum.go
+COMPILEsha512sum/sha512sum.go
+COMPILEsleep/sleep.go
+COMPILEtouch/touch.go
+COMPILEtrue/true.go
+COMPILEwhoami/whoami.go
+COMPILEyes/yes.go
+COMPILEkill/kill.go
+COMPILEtruncate/truncate.go
+COMPILEcp/cp.go
+COMPILEln/ln.go
