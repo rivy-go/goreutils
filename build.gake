@@ -1,30 +1,29 @@
-.VAR:COMPILE:go build ../src/
 mkdir -p build
-.CD:build
 .CONC
-COMPILEarch/arch.go
-COMPILEcat/cat.go
-COMPILEchmod/chmod.go
-COMPILEdate/date.go
-COMPILEecho/echo.go
-COMPILEfalse/false.go
-COMPILEgroups/groups.go
-COMPILEls/ls.go
-COMPILEmd5sum/md5sum.go
-COMPILEmkdir/mkdir.go
-COMPILEmv/mv.go
-COMPILEpwd/pwd.go
-COMPILErm/rm.go
-COMPILEsha1sum/sha1sum.go
-COMPILEsha256sum/sha256sum.go
-COMPILEsha512sum/sha512sum.go
-COMPILEsleep/sleep.go
-COMPILEtouch/touch.go
-COMPILEtrue/true.go
-COMPILEwhoami/whoami.go
-COMPILEyes/yes.go
-COMPILEkill/kill.go
-COMPILEtruncate/truncate.go
-COMPILEcp/cp.go
-COMPILEln/ln.go
+go build -o build/arch src/arch/arch.go
+go build -o build/cat src/cat/cat.go
+go build -o build/chmod src/chmod/chmod.go
+go build -o build/date src/date/date.go
+go build -o build/echo src/echo/echo.go
+go build -o build/false src/false/false.go
+go build -o build/groups src/groups/groups.go
+go build -o build/ls src/ls/ls.go
+go build -o build/md5sum src/md5sum/md5sum.go
+go build -o build/mkdir src/mkdir/mkdir.go
+go build -o build/mv src/mv/mv.go
+go build -o build/pwd src/pwd/pwd.go
+go build -o build/rm src/rm/rm.go
+go build -o build/sha1sum src/sha1sum/sha1sum.go
+go build -o build/sha256sum src/sha256sum/sha256sum.go
+go build -o build/sha512sum src/sha512sum/sha512sum.go
+go build -o build/sleep src/sleep/sleep.go
+go build -o build/touch src/touch/touch.go
+go build -o build/true src/true/true.go
+go build -o build/whoami src/whoami/whoami.go
+go build -o build/yes src/yes/yes.go
+go build -o build/kill src/kill/kill.go
+go build -o build/truncate src/truncate/truncate.go
+go build -o build/cp src/cp/cp.go
+go build -o build/ln src/ln/ln.go
+go build -o build/env src/env/env.go
 .ENDCONC
