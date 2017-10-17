@@ -6,8 +6,12 @@ import (
 )
 
 func main() {
+	flag.Parse()
+	var arg = "yes"
+	if flag.Arg(0) != "" {
+		arg = flag.Arg(0)
+	}
 	for true {
-		flag.Parse()
-		fmt.Println(flag.Arg(0))
+		fmt.Println(arg)
 	}
 }
